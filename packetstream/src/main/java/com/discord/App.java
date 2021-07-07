@@ -17,9 +17,10 @@ public class App
     public static void main( String[] args ) throws LoginException
     {
     	
-       JDA jda = JDABuilder.createDefault("NjM1Mzc2MzIyOTAxOTY2ODQ4.XawKUA.tyy-G04J9Rw73oHhnF7Js6KOSYY").build();
+       JDA jda = JDABuilder.createDefault("ODYyMTk5NTg2NDE1MzEyODk2.YOU38A.NQFy33aCshTn2TFletSlpC67nSY").build();
        jda.addEventListener(new bot());
        jda.getPresence().setActivity(Activity.listening("$help in DMs	"));
 
     }
 }
+
