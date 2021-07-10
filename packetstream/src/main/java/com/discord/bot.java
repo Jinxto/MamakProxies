@@ -363,6 +363,23 @@ public class bot extends ListenerAdapter {
 	if(!event.getAuthor().equals(event.getJDA().getSelfUser()) && event.getChannel().getId().equals("826126426809172008")){
 		String msg = event.getMessage().getContentRaw();
 		MessageChannel mes = event.getChannel();
+			if(msg.equals("$balance1")) {
+			System.out.println("true");
+			try {
+				HttpResponse<JsonNode> response = Unirest.get("https://basic.proxiesapi.xyz/proxy_api/v1/basic/reseller")
+						.header("Authorization", "Bearer 69e5c480-dedb-11eb-ba80-0242ac130004")
+	   					   .header("Content-Type", "application/json")
+	   					   .asJson();
+				JSONObject jsong = response.getBody().getObject();
+				String data = jsong.get("data_left").toString();
+				System.out.println(data);
+				mes.sendMessage(data).queue();
+				return;
+			} catch (UnirestException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 		if(msg.contains("$viewuser1")) {
 			String temp = msg.replace("$viewuser1 ", "");
 			
