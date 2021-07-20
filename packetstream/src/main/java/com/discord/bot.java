@@ -272,9 +272,6 @@ public class bot extends ListenerAdapter {
          tempeor = tempeor.replace(generator+" ", "");
          if(numbers<10000) {
         	 csv cos = new csv();
-        	 String veri = cos.getId(id);
-        	 if(veri!=null) {
-        
 				try {
 					HttpResponse<JsonNode> response= Unirest.get("https://basic.proxiesapi.xyz/proxy_api/v1/basic/users/get/"+id)
 	    					   .header("Authorization", "Bearer 69e5c480-dedb-11eb-ba80-0242ac130004")
@@ -312,7 +309,7 @@ public class bot extends ListenerAdapter {
 	        					 
 	        					  if(numbers>=22) {
 	        						  cos.deleteFile("temp.txt");
-	        			        		 attachment="data.mamakproxiesp2.com:31112:"+nama+":"+kataLaluan+"_country-";
+	        			        		 attachment="resi.mamakproxiesp2.com:31112:"+nama+":"+kataLaluan+"_country-";
 	        			        		
 	        			        		 cos.writeSpecific2(attachment, "temp.txt", numbers,countrycode);
 	        			        		  channel.sendFile(new File("temp.txt"),"`Proxies generated`").queue();
@@ -322,7 +319,7 @@ public class bot extends ListenerAdapter {
 	        		        			}
 	        		        			if(numbers<22) {
 	        		        			for(int i = 0; i<numbers; i++) {
-	        		        				attachment+="data.mamakproxiesp2.com:31112:"+nama+":"+kataLaluan+"_country-"+countrycode+"_session-"+util.generateRandomString(7)+"\n";
+	        		        				attachment+="resi.mamakproxiesp2.com:31112:"+nama+":"+kataLaluan+"_country-"+countrycode+"_session-"+util.generateRandomString(7)+"\n";
 	        		        			 
 	        		        			}
 	        		        		
@@ -354,7 +351,7 @@ public class bot extends ListenerAdapter {
 				}
         		 
         		 
-        	 }
+        	 
          }
     	 
      }
@@ -363,7 +360,7 @@ public class bot extends ListenerAdapter {
 	if(!event.getAuthor().equals(event.getJDA().getSelfUser()) && event.getChannel().getId().equals("826126426809172008")){
 		String msg = event.getMessage().getContentRaw();
 		MessageChannel mes = event.getChannel();
-			if(msg.equals("$balance1")) {
+		if(msg.equals("$balance1")) {
 			System.out.println("true");
 			try {
 				HttpResponse<JsonNode> response = Unirest.get("https://basic.proxiesapi.xyz/proxy_api/v1/basic/reseller")
@@ -514,4 +511,3 @@ public class bot extends ListenerAdapter {
 	
 	}
 }
-
