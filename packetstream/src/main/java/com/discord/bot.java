@@ -307,26 +307,16 @@ public class bot extends ListenerAdapter {
 	        				   countrycode = countrycode.toUpperCase();
 	        				   if(response3.getStatus()==200) {
 	        					 
-	        					  if(numbers>=22) {
+	        					  
 	        						  cos.deleteFile("temp.txt");
 	        			        		 attachment="resi.mamakproxiesp2.com:5000:"+nama+":"+kataLaluan+"_country-";
 	        			        		
 	        			        		 cos.writeSpecific2(attachment, "temp.txt", numbers,countrycode);
-	        			        		  channel.sendFile(new File("temp.txt"),"`Proxies generated`").queue();
+	        			        		  channel.sendFile(new File("temp.txt"),"`Proxies_generated.txt`").queue();
 	        			        		  cos.deleteFile("temp.txt");
 	        			        		 
 	        			        		   return;
-	        		        			}
-	        		        			if(numbers<22) {
-	        		        			for(int i = 0; i<numbers; i++) {
-	        		        				attachment+="resi.mamakproxiesp2.com:5000:"+nama+":"+kataLaluan+"_country-"+countrycode+"_session-"+util.generateRandomString(7)+"\n";
-	        		        			 
-	        		        			}
-	        		        		
-	        		        			attachment = "```"+attachment+"```";
-	        		        			channel.sendMessage(attachment).queue();
-	        		        			return;
-	        		        			}
+	        		        			
 	        					}
 	        				}
 	        				
