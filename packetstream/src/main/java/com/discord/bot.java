@@ -309,7 +309,7 @@ public class bot extends ListenerAdapter {
 	        					 
 	        					  
 	        						  cos.deleteFile("temp.txt");
-	        			        		 attachment="resi.mamakproxiesp2.com:5000:"+nama+":"+kataLaluan+"_country-";
+	        			        		 attachment="resi.mamakproxiesp2.com:31112:"+nama+":"+kataLaluan+"_country-";
 	        			        		
 	        			        		 cos.writeSpecific2(attachment, "temp.txt", numbers,countrycode);
 	        			        		  channel.sendFile(new File("temp.txt"),"`Proxies_generated.txt`").queue();
