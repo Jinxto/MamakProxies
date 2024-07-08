@@ -2,7 +2,7 @@
 
 ---
 
-# Discord Bot Deployment Guide
+# Shopify automated proxy bot
 
 This guide will walk you through deploying your Discord bot, which uses the Shopify API to sell and generate residential proxies, to a Linux AWS server.
 
